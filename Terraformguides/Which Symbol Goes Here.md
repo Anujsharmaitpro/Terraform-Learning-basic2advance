@@ -588,8 +588,13 @@ Keep these commands nearby to instantly check your structures inside your PowerS
     
 -   **`tf plan -refresh=false`**: Generates a standard architectural calculation blueprint while skipping internet-based Azure network state scans—perfect for local code verification.
     
+     
 
 
+
+```
+Your Markdown file is ready
+[]
 
 I have created a comprehensive, deeply structured reference sheet named `terraform_syntax_guide.md` tracking all the infrastructure design rules we navigated together. 
 
