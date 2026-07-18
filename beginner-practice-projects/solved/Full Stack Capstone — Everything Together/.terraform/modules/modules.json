@@ -1,0 +1,1 @@
+{"Modules":[{"Key":"","Source":"","Dir":"."},{"Key":"api_app","Source":"./modules/nct_app_service","Dir":"modules/nct_app_service"},{"Key":"web_app","Source":"./modules/nct_app_service","Dir":"modules/nct_app_service"}]}
