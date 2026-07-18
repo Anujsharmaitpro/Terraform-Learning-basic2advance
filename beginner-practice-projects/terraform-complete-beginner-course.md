@@ -4,9 +4,7 @@
 
 > Scope note, stated honestly upfront: this guide is built from general
 > Terraform/Azure fundamentals and cross-checked against the structure
-> of the `piyushsachdeva/Terraform-Full-Course-Azure` course you linked
-> (I was rate-limited pulling the full folder listing this time, so I'm
-> not claiming to mirror every lesson number exactly — but the concept
+> — but the concept
 > coverage below is the standard, complete beginner-to-intermediate
 > Terraform curriculum, and it lines up with what that kind of course
 > teaches). If you want me to verify against a specific day/lesson
