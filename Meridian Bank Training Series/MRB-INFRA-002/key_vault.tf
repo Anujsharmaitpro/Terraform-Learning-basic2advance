@@ -41,8 +41,10 @@ resource "azurerm_linux_virtual_machine" "mrb_vm" {
   size = var.mrb_infra.vm_size 
 network_interface_ids = [azurerm_network_interface.mrb_nic.id]
 admin_username = var.mrb_infra.admin_username
-admin_password = azurerm_key_vault_secret.vm_password.value
-disable_password_authentication = false
+
+
+
+disable_password_authentication = true
 os_disk {
   storage_account_type = "Standard_LRS"
   caching = "ReadWrite"
@@ -58,6 +60,10 @@ source_image_reference {
     version   = "latest"
   }
 
+admin_ssh_key {
+    username   = var.mrb_infra.admin_username
+    public_key = file(pathexpand("~/.ssh/id_rsa.pub")) 
+  }
 custom_data = base64encode(<<-EOF
     #!/bin/bash
     # 1. Update packages and install Nginx
