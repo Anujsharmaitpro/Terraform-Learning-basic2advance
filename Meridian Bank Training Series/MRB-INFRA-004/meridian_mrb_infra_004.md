@@ -90,6 +90,10 @@ vm_names = ["vm1", "vm2"]   # set(string) — used with for_each
 
 ---
 
+**userdata.sh Location:**
+download it from  this project 
+Ensure your custom Nginx script file named userdata.sh sits directly in the root directory alongside main.tf so filebase64("${path.module}/userdata.sh") can read it. you can test your project if it working or not by acessing the load balancer public ip.
+
 ## 3. Core Components
 
 ### Component 1 — Networking Foundation
