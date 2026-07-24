@@ -1,4 +1,4 @@
-# Apex Industries — Cloud Infrastructure Training Series (for DynamicMembership you need to have Microsoft Entra ID P1 or P2 or else tf plan will going end with error. Custom RBAC Roles +  API Permissions will work fine.
+# Apex Industries — Cloud Infrastructure Training Series (**for DynamicMembership you need to have Microsoft Entra ID P1 or P2 or else tf plan will going to end with error. Custom RBAC Roles +  API Permissions will work fine.**********
 ## Custom RBAC Roles + Dynamic Groups + API Permissions
 **Project Code:** `APX-INFRA-002` | **Level:** Intermediate++ | **Frequency:** Common in mature orgs
 **Environment:** Windows + VS Code + PowerShell | Fully self-contained | Cost: Free
