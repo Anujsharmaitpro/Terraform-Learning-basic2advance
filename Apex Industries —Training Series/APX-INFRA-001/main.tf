@@ -3,10 +3,10 @@ user_principal_name = "${var.user_mail_nickname}@${data.azuread_domains.my_dc.do
 display_name = var.user_display_name
 force_password_change = true
 password = "P@ssw0rod@1"
-employee_id = "202206"
+employee_id = "xxxxxxxx"
 employee_type = "FULL TIME"
 job_title = "Hybird-infra-system-admin"
-mobile_phone = "9873410647"
+mobile_phone = "xxxxxxxxxx"
 department = "IT INFRA"
 
 }
