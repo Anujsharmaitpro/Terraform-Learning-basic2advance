@@ -184,7 +184,7 @@ terraform workspace show
 
 ## 6. Hands-On Demo: Setting Up Workspaces on Azure
 
-Let's rebuild the video's live demo, but using Azure resources instead of AWS. We'll create a simple, reusable **Azure Linux VM module**, then use workspaces to deploy it independently to `dev`, `stage`, and `prod`.
+Let's rebuild the demo, but using Azure resources instead of AWS. We'll create a simple, reusable **Azure Linux VM module**, then use workspaces to deploy it independently to `dev`, `stage`, and `prod`.
 
 ### Step 1 — Folder structure
 
@@ -322,7 +322,7 @@ terraform init
 terraform apply
 ```
 
-This creates one VM using `Standard_B1s`. Now, exactly like the video, if you create a `stage.tfvars` with `vm_size = "Standard_B2s"` and run:
+This creates one VM using `Standard_B1s`. Now,  if you create a `stage.tfvars` with `vm_size = "Standard_B2s"` and run:
 
 ```bash
 terraform apply -var-file="stage.tfvars"
@@ -371,7 +371,7 @@ Now check the Azure Portal (Resource Groups) — you will see **three separate V
 
 ## 7. Making It Dynamic: `terraform.workspace` + `lookup()`
 
-In the demo above, we still manually edited `terraform.tfvars` (or swapped `-var-file`) each time we switched workspaces. That's manual, error-prone, and not scalable. The video shows a cleaner pattern using two built-in tools:
+In the demo above, we still manually edited `terraform.tfvars` (or swapped `-var-file`) each time we switched workspaces. That's manual, error-prone, and not scalable.  two built-in tools:
 
 1. **`terraform.workspace`** — a special, automatically available variable that always equals the name of the workspace you're currently in (`"dev"`, `"stage"`, or `"prod"`).
 2. **`lookup(map, key, default)`** — a built-in function that looks up a value from a map using a key, and falls back to a default if the key isn't found.
@@ -418,13 +418,13 @@ terraform apply
 # terraform.workspace = "stage" → lookup finds "stage" in the map → uses Standard_B2s automatically
 ```
 
-No more editing `.tfvars` by hand every time you switch environments — the correct configuration is selected automatically based on which workspace is active. This is the same pattern shown live in the video (it's identical logic; only the resource and value names are swapped for Azure).
+No more editing `.tfvars` by hand every time you switch environments — the correct configuration is selected automatically based on which workspace is active.  (it's identical logic; only the resource and value names are swapped for Azure).
 
 ---
 
 ## 8. Two Ways to Manage Per-Environment Values
 
-The video explicitly calls out that manually editing the same `.tfvars` file every time you switch workspaces is bad practice. It gives you two better alternatives:
+That manually editing the same `.tfvars` file every time you switch workspaces is bad practice. It gives you two better alternatives:
 
 ### Option A — One `.tfvars` file per environment, passed explicitly
 
@@ -456,7 +456,7 @@ This is the pattern from Section 7.
 
 ## 9. Critical Safety Warning
 
-This is called out explicitly in the video, and it deserves its own section because it can cause **real production outages**:
+This is called out explicitly, and it deserves its own section because it can cause **real production outages**:
 
 > ⚠️ **Workspaces do not stop you from running the wrong command in the wrong workspace.** If you intend to destroy the `stage` workspace, but you're accidentally sitting in the `prod` workspace, `terraform destroy` **will destroy your production infrastructure.**
 
@@ -484,7 +484,7 @@ This isn't a criticism of the concept — just context so you know workspaces ar
 
 ## 11. Interview Questions You Should Be Ready For
 
-The video explicitly says: *"nobody will ask you to build an entire AKS cluster in an interview — they'll ask about workspaces and modules."* Here are the kinds of questions you should be able to answer confidently:
+ "nobody will ask you to build an entire AKS cluster in an interview — they'll ask about workspaces and modules."* Here are the kinds of questions you should be able to answer confidently:
 
 1. **What problem do Terraform workspaces solve?**
    → Reusing the same Terraform code across multiple environments without state file conflicts or code duplication.
@@ -647,4 +647,4 @@ Notice that naming resources with `${terraform.workspace}` also solves a seconda
 | **Biggest risk** | Running `destroy`/`apply` in the wrong workspace — always double-check with `terraform workspace show`. |
 | **Limitation** | Workspaces alone don't handle differing backends, subscriptions, or structurally different architectures per environment. |
 
-**Practice tip (same advice as in the video):** Don't just read this — actually run through Section 6 and Section 12 yourself in an Azure sandbox subscription or free trial. Interviewers ask about workspaces and modules far more often than complex services, precisely because they reveal whether you understand Terraform's core mechanics.
+**Practice tip (same advice ):** Don't just read this — actually run through Section 6 and Section 12 yourself in an Azure sandbox subscription or free trial. Interviewers ask about workspaces and modules far more often than complex services, precisely because they reveal whether you understand Terraform's core mechanics.
