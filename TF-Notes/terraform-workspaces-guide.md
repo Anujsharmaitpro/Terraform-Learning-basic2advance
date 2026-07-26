@@ -6,9 +6,7 @@
 ## Before You Start
 
 This guide is built from a live, unedited tutorial on Terraform
-Workspaces — meaning the instructor debugs real mistakes on camera
-rather than presenting polished, always-working code. That's actually
-the most realistic learning format there is. Every error that appeared
+Workspaces — . That's actually the most realistic learning format there is. Every error that appeared
 in the session is documented here with an explanation of *why* it
 happened, not just the fix.
 
