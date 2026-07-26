@@ -116,7 +116,7 @@ terraform apply -var-file="stage.tfvars"
 
 You would *expect* a brand-new VM to be created for Staging. **But that's not what happens.** Terraform looks at its one state file, sees "I already have a VM called `example-vm`," and thinks you just want to **modify** that same VM (e.g., resize it to the Staging VM size) — or in worse cases, destroy and recreate it.
 
-> ⚠️ This is exactly what the video demonstrates live: switching `.tfvars` files does **not** create separate infrastructure. It just mutates the same resource over and over, because there's only one state file remembering only one set of resources.
+> ⚠️ This is exactly what will happen : switching `.tfvars` files does **not** create separate infrastructure. It just mutates the same resource over and over, because there's only one state file remembering only one set of resources.
 
 **The real requirement** the teams have is:
 - One codebase, written once.
