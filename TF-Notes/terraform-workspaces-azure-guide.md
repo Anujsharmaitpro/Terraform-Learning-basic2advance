@@ -1,15 +1,15 @@
 # Terraform Workspaces — A Complete Beginner's Guide (Azure Edition)
 
-> Based on: "Terraform Zero to Hero — Day 6: Terraform Workspaces" (video transcript you shared)
+> Based on: "Terraform Zero to Hero — : Terraform Workspaces" 
 > Rewritten and re-explained for **Azure**, and expanded for absolute beginners.
 
 ---
 
 ## How to use this guide
 
-The original video uses AWS (EC2 + S3). Since you're focused on Azure, every concept below is mapped to Azure equivalents:
+The original uses AWS (EC2 + S3). Since you're focused on Azure, every concept below is mapped to Azure equivalents:
 
-| AWS concept in video | Azure equivalent used in this guide |
+| AWS concept  | Azure equivalent used in this guide |
 |---|---|
 | AWS provider | `azurerm` provider |
 | EC2 instance | Azure Linux Virtual Machine |
@@ -42,7 +42,7 @@ Nothing about the **core concept of Terraform workspaces** changes — it works 
 
 ## 1. The Business Problem
 
-Let's set the scene with a story, exactly like the video does, but on Azure.
+Let's set the scene with a story, exactly likes, but on Azure.
 
 Imagine you are a DevOps Engineer. A development team, **Team XYZ**, raises a ticket:
 
