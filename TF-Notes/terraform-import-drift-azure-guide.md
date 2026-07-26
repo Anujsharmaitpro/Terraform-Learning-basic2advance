@@ -1,11 +1,11 @@
 # Terraform Interview Scenarios — Import & Drift Detection (Azure Edition)
 
-> Based on: "Terraform Zero to Hero — Day 8 (Bonus): Two Scenario-Based Interview Questions" (video transcript you shared)
+> Based on: "Terraform Zero to Hero — Day 8 (Bonus): Two Scenario-Based Interview Questions" 
 > Rewritten and re-explained for **Azure**, for absolute beginners.
 
-This is a companion to your Day 6 workspaces guide. Where that video used AWS (EC2, CloudFormation, IAM, Lambda, CloudWatch), this guide maps every concept to its Azure equivalent so you can practice and interview using the cloud you actually work with.
+This is a companion to your Day 6 workspaces guide. Where that used AWS (EC2, CloudFormation, IAM, Lambda, CloudWatch), this guide maps every concept to its Azure equivalent so you can practice and interview using the cloud you actually work with.
 
-| AWS concept in video | Azure equivalent used in this guide |
+| AWS concept  | Azure equivalent used in this guide |
 |---|---|
 | EC2 instance | Azure Virtual Machine |
 | CloudFormation | ARM Templates / Bicep |
@@ -18,7 +18,7 @@ This is a companion to your Day 6 workspaces guide. Where that video used AWS (E
 
 ## Table of Contents
 
-1. [Why This Video Exists](#1-why-this-video-exists)
+1. [Why This Exists](#1-why-this--exists)
 2. [Scenario 1: Migrating Existing Azure Infrastructure into Terraform](#2-scenario-1-migrating-existing-azure-infrastructure-into-terraform)
 3. [Scenario 1 — Full Walkthrough on Azure](#3-scenario-1--full-walkthrough-on-azure)
 4. [Scenario 2: Configuration Drift Detection](#4-scenario-2-configuration-drift-detection)
@@ -28,9 +28,9 @@ This is a companion to your Day 6 workspaces guide. Where that video used AWS (E
 
 ---
 
-## 1. Why This Video Exists
+## 1. Why This  Exists
 
-The instructor's earlier 7-day series covered core Terraform concepts (providers, state, modules, workspaces, etc.). This bonus day exists to bridge a specific gap: **scenario-based interview questions**. Knowing *what* a Terraform command does is different from being able to explain, out loud, *why* you'd use it and *what challenges* come with it — which is what interviewers actually probe for.
+The series covered core Terraform concepts (providers, state, modules, workspaces, etc.). This bonus day exists to bridge a specific gap: **scenario-based interview questions**. Knowing *what* a Terraform command does is different from being able to explain, out loud, *why* you'd use it and *what challenges* come with it — which is what interviewers actually probe for.
 
 Two scenarios are covered:
 
