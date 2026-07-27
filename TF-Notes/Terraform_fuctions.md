@@ -1,6 +1,6 @@
 # 📘 Terraform Masterclass: Functions Deep Dive (Azure Edition)
 
-Welcome to your **Terraform Masterclass**! As a DevOps engineer and educator, I am thrilled to guide you through this. 
+Welcome to your **Terraform Masterclass**! . 
 
 Since we are building from the ground up, we will start from absolute zero. I will explain this as if you have never written a single line of code, using **Microsoft Azure** as our playground. Grab a coffee, and let’s dive in! ☕
 
